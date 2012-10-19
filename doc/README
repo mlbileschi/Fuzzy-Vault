@@ -1,0 +1,93 @@
+This should remain an ongoing process. Code documentation is very important, and stops many headaches before they happen.
+
+
+--- RUNNING THE CODE ---
+Things you're going to need to have set up before you're up and running:
+NTL
+the makefile
+filesystem/database pointers
+
+There is a section for each of these and I HIGHLY recommend you visit them. 
+
+Unix-based machines:
+
+cd into fingerprintHash/main, type
+user> make
+and then the project should be ready-to-go. If you get an error like
+
+/usr/bin/ld: cannot find -lntl
+collect2: ld returned 1 exit status
+make: *** [Main] Error 1
+
+see the section entitled NTL. If you don't have g++, go to the Makefile (in fingerprintHash/main) and change the variable  CXX = g++ to CXX = c++
+or whatever you find appropriate. At the time of the writing of this, the project compiled on both g++ and c++. For what it's worth, this project was designed with g++. 
+
+For information on how to run different experiments with the code, type 
+user> ./RUNME help
+from within fingerprintHash/main.
+
+If you'd like to clean the files, (as is customary) you can type
+user> make clean
+from within fingerprintHash/main
+
+It's quite possible that, when you run this for the first time, your filesystem will not mesh with the filesystem configuration that this project was developed on. See the section entitled filesystem configurations.
+
+Windows: There is a makefile for the project. If you've not got make for windows, go to the section entitled portability. There are instructions on how to get that up and running. From there, you may either develop from the command line, or use an IDE. If you use an IDE, you're going to need to link to NTL, and to use the configurations from the makefile in your project. I know you can do this in many IDE's so you're going to just have to follow the documentation for your IDE of choice.
+
+--- FILESYSTEM CONFIGURATIONS AND DATABASE SPECIFICS ---
+
+It's quite possible that, when you run this for the first time, your filesystem will not mesh with the filesystem configuration that this project was developed on. The way we have it set up is the entry to our databases is at the same level as fingerprintHash. The exact code that finds the files and reads them can be found in fingerprintHash/common/src/ IOUtils.cpp. That line (at the time of the writing of this) looks like 			
+	vector<Minutiae> reddFingerprint = readFingerprintFromFile("../../CUBS_FP_DATA/" +
+															database +"/features/" + 
+															toString(fingerprintNumber) + "_" + 
+															toString(readingNumber) + ".fp");
+so that the (relative) complete filenames are ../../CUBS_FP_DATA/FVC2002/DB1/features/1_1.fp If you wish to use different data and/or a different configuration, you need to point your program to this data via this portal. 
+
+We have used data from FVC 2002, 2004, and 2006, from the SUNY at Buffalo's CUBS center. The way this data is set up is there are 8 readings from each participant in the program, and 100 participants. These constants have been hard-coded into many parts of our program, and should you use differently configured data, you should find and change these constants. I have mentioned this in some of my code, but to be safe, you should probably do something like user {~/fingerprintHash/} > grep -R '100'
+Moreover, the files are formatted as the following:
+
+[image_file]
+<number>
+../../CUBS_FP_DATA/FVC2002/DB1/1_1.tif
+[minutiae]
+<number>
+x_val y_val orientation_val something something
+x_val y_val orientation_val something something
+.
+.
+.
+
+So we drop the first 5 lines, and read in only the first three values of each line. This is reflected in readFingerprintFromFile in fingerprintHash/common/src/IOUtils.cpp. If you wish to use different data, you probably will need to change this.
+
+--- THE MAKEFILE ---
+As is mentioned in the portability section, there are some small issues when it comes to using Windows, and the makefile (that is, once you've got make installed). If you wish to use optimization flags, be careful. We have found that they speed up our code greatly, but this comes at a cost of unreliability. We have found that, sometimes, if you include an optimization (say -O3) flag, the code compiles, but throws a runtime error: "illegal instruction." I have done some research, and it just seems to be an inconsistency within g++, and not fixable from where I'm sitting. I may be scapegoating, but I have not yet found a solution.
+
+The reason for all the rm *~ in the make clean command is that much of the development of this program was done within gedit, which creates temporary whateverFile.txt~ files when you're editing. 
+
+
+--- PORTABILITY ---
+One of the big reasons we took on the task of taking a WHOLE bunch of code and redoing it was the lack of portability in the previous version, so hopefully this shouldn't be as painful for you as it was for us.
+
+Unix/Mac - The system was built in these systems, and there should be no system incompatibility issues.
+
+Windows - 
+	If you plan on working with this project from the command line, you must have make for windows installed: http://gnuwin32.sourceforge.net/packages/make.htm . If you don't know what to do from here, download the "complete package" and install it. You might have to change your $PATH environment variable to see the make executable. To check if you need to do this, open up a command prompt, and type make. If it says that the command is not a "batch" or whatever windows says in those situations, you need to change your $PATH environment variable. If you don't know how to do this, see http://www.computerhope.com/issues/ch000549.htm . I recommend just appending it to the end of the path variable, separated by a semicolon.
+	Now that you've got make up and running, you might run into a few small snaffoos with the Makefile, located in fingerprintHash/main. These are by no means insurmountable. They lie mainly with lines like
+	echo -e "\nexecutable file's name is RUNME\n"
+	rm *.o *~ RUNME ../common/inc/*~ ../common/src/*~ ../doc/*~
+in that file. The problem is rm is a basic unix command that (to my knowledge) Windows doesn't have. So in order to clean up the files, you will need to edit the Makefile to remove all the *.o files in ./   . I've mocked up a command for what it might look like, but you're probably going to have to experiment with this, unless I remember to test it out next time I'm on my Windows machine. The echo command is purely convenient, and serves no functional purpose, so this line may be removed if it causes any trouble. (Windows has `echo` but I'm not sure the -e switch is the same).
+
+	If you plan on working with this project from some IDE, you must consult with the documentation for that IDE in order to find how to import a project and configure it with a makefile. I know this is possible in VS and I believe it is possible with Eclipse, although I've never quite had the patience to get it to work. 
+
+	If you're having poorly formatted output results, it's likely that you're falling into the ongoing debate between \n (Unix) vs \r\n (Windows). So I recommend using endl instead of \n, and where not possible, using \r\n (since it works equally well on both systems). I have tried to remove all of them that I can find, but you never know!
+
+	While in unix, the executable file will be named RUNME, in windows, it will most likely be named RUNME.exe.
+
+
+--- NTL ---
+The current iteration of the Welch-Berlekamp decoding algorithm uses Shoup's NTL (a library for doing number theory). Linking to the library can be done with the variable LDFLAGS = -I ../common/NTL-unix/include -L ../common/NTL-unix/lib in the makefile for the fingerprint hashing project. I strongly recommend you download and compile separate versions of NTL on each computer you will be working on. I have tried to circumvent this in the past, with no success. If you wish to use an IDE, you must build the library, and link to it. Otherwise, you will need to change LDFLAGS in fingerprintHash/main/Makefile. 
+
+Unix - http://www.shoup.net/ntl/doc/tour-unix.html
+Notably, you will probably want to change where NTL installs to, so before doing the above, I recommend going to the makefile for NTL and changing the variable PREFIX in NTL's makefile to be wherever you want NTL to go. 
+
+Windows - http://www.shoup.net/ntl/doc/tour-win.html

@@ -1,0 +1,5 @@
+style guidelines:
+camelcase variable names
+camelcase method names
+uppercase camelcase filenames e.g. ProbDistroGA
+uppercase camelcase classnames

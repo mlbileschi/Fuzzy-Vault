@@ -1,0 +1,339 @@
+timberlake {/projects/fingerprint-hash/fingerprintHash/main} > valgrind ./RUNME test
+==26974== Memcheck, a memory error detector
+==26974== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==26974== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info
+==26974== Command: ./RUNME test
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x419708: VaultBF::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424404: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x419816: VaultBF::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424404: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x4186AA: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424492: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418A40: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424492: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418ACC: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424492: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418C6D: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424492: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418B9F: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424492: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418D3B: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424492: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x419708: VaultBF::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4116BA: Vault::compareExtract(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x411D64: Vault::compareExtractBF(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412337: Vault::unlock(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424500: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x419816: VaultBF::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4116BA: Vault::compareExtract(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x411D64: Vault::compareExtractBF(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412337: Vault::unlock(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424500: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x419668: VaultBF::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4116BA: Vault::compareExtract(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x411D64: Vault::compareExtractBF(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412337: Vault::unlock(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424500: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x4186AA: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4116BA: Vault::compareExtract(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41231D: Vault::unlock(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424517: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418A40: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4116BA: Vault::compareExtract(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41231D: Vault::unlock(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424517: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418ACC: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4116BA: Vault::compareExtract(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41231D: Vault::unlock(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424517: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418C6D: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4116BA: Vault::compareExtract(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41231D: Vault::unlock(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424517: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418B9F: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4116BA: Vault::compareExtract(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41231D: Vault::unlock(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424517: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418D3B: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4116BA: Vault::compareExtract(polyResults*, std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41231D: Vault::unlock(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424517: TestSanity0() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42551B: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+TestSanity0:				 -31- passed
+TestTriangleDistance(10500,10501,0):	passed
+TestTriangleDistance(10500,6098,17.3782):	passed
+TestTriangleDistance(10500,20226,12.9615):	passed
+TestTriangleDistance(6098,20227,15.5563):	passed
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x4186AA: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424F9E: TestToZZTriangles() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42561C: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418C6D: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424F9E: TestToZZTriangles() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42561C: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418D3B: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x424F9E: TestToZZTriangles() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x42561C: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+TestToZZTriangles:				passed
+TestBFDistance(39908,48188,60.2163):		failed 67.72
+TestBFDistance(39908,3441,52.4881):		failed 53.7587
+TestBFDistance(48188,3441,49.5681):		failed 65.3605
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x419668: VaultBF::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423F46: TestBF() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4256EA: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x419708: VaultBF::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423F46: TestBF() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4256EA: runVaultUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A2D: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+TestBF:				passed
+evaluatePerformanceTest:			==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x4186AA: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41B684: makeAllVaults(std::string, float) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426C5C: evaluatePerformanceTest() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426EDA: runGAUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A3A: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418C6D: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41B684: makeAllVaults(std::string, float) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426C5C: evaluatePerformanceTest() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426EDA: runGAUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A3A: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418D3B: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41B684: makeAllVaults(std::string, float) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426C5C: evaluatePerformanceTest() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426EDA: runGAUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A3A: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418A40: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41B684: makeAllVaults(std::string, float) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426C5C: evaluatePerformanceTest() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426EDA: runGAUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A3A: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418ACC: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41B684: makeAllVaults(std::string, float) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426C5C: evaluatePerformanceTest() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426EDA: runGAUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A3A: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x417444: toFeild(float, float, float, int) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x418B9F: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41B684: makeAllVaults(std::string, float) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426C5C: evaluatePerformanceTest() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426EDA: runGAUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A3A: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+passed
+nextGenerationTest:				==26974== Conditional jump or move depends on uninitialised value(s)
+==26974==    at 0x4186AA: VaultTriangles::minutiae2ZZ(std::vector<Minutiae, std::allocator<Minutiae> > const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x412850: Vault::lock(std::vector<Minutiae, std::allocator<Minutiae> >, NTL::vec_ZZ_p) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41B684: makeAllVaults(std::string, float) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426907: nextGenerationTest() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426F00: runGAUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A3A: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974== 
+==26974== Invalid read of size 8
+==26974==    at 0x41C304: __gnu_cxx::__normal_iterator<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > >*, std::vector<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > >, std::allocator<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > > > > >::__normal_iterator(std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > >* const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41C328: std::vector<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > >, std::allocator<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > > > >::begin() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41C39A: std::vector<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > >, std::allocator<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > > > >::operator[](unsigned long) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x419E0B: testGenuines(int, int, Vault*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x419FF7: runDatabase(std::string, std::vector<float, std::allocator<float> >*, int, float) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4096C8: evalFitness(std::vector<float, std::allocator<float> >, int, float, std::string) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x409816: nextGeneration(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >, int, int, int, float, std::string) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4269BA: nextGenerationTest() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426F00: runGAUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A3A: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==  Address 0x8d0 is not stack'd, malloc'd or (recently) free'd
+==26974== 
+==26974== 
+==26974== Process terminating with default action of signal 11 (SIGSEGV)
+==26974==  Access not within mapped region at address 0x8D0
+==26974==    at 0x41C304: __gnu_cxx::__normal_iterator<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > >*, std::vector<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > >, std::allocator<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > > > > >::__normal_iterator(std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > >* const&) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41C328: std::vector<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > >, std::allocator<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > > > >::begin() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x41C39A: std::vector<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > >, std::allocator<std::vector<std::vector<folded, std::allocator<folded> >, std::allocator<std::vector<folded, std::allocator<folded> > > > > >::operator[](unsigned long) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x419E0B: testGenuines(int, int, Vault*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x419FF7: runDatabase(std::string, std::vector<float, std::allocator<float> >*, int, float) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4096C8: evalFitness(std::vector<float, std::allocator<float> >, int, float, std::string) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x409816: nextGeneration(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > >, int, int, int, float, std::string) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x4269BA: nextGenerationTest() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x426F00: runGAUnitTests(int*, int*) (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x423A3A: runUnitTests() (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==    by 0x40F39C: main (in /shared/projects/fingerprint-hash/fingerprintHash/main/RUNME)
+==26974==  If you believe this happened as a result of a stack
+==26974==  overflow in your program's main thread (unlikely but
+==26974==  possible), you can try to increase the size of the
+==26974==  main thread stack using the --main-stacksize= flag.
+==26974==  The main thread stack size used in this run was 10485760.
+==26974== 
+==26974== HEAP SUMMARY:
+==26974==     in use at exit: 57,676,540 bytes in 854,104 blocks
+==26974==   total heap usage: 54,857,261 allocs, 54,003,157 frees, 2,823,929,923 bytes allocated
+==26974== 
+==26974== LEAK SUMMARY:
+==26974==    definitely lost: 51,520 bytes in 811 blocks
+==26974==    indirectly lost: 24,037,152 bytes in 389,848 blocks
+==26974==      possibly lost: 22,081,524 bytes in 460,032 blocks
+==26974==    still reachable: 11,506,344 bytes in 3,413 blocks
+==26974==         suppressed: 0 bytes in 0 blocks
+==26974== Rerun with --leak-check=full to see details of leaked memory
+==26974== 
+==26974== For counts of detected and suppressed errors, rerun with: -v
+==26974== Use --track-origins=yes to see where uninitialised values come from
+==26974== ERROR SUMMARY: 1310486 errors from 30 contexts (suppressed: 4 from 4)
+Segmentation fault

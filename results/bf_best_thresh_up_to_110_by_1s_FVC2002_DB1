@@ -1,0 +1,73 @@
+
+start.
+
+transformations: 1000
+
+END.
+thresh = 0 eer =	0.534965	<< best so far!
+thresh = 1 eer =	0.481565	<< best so far!
+thresh = 2 eer =	0.393547	<< best so far!
+thresh = 3 eer =	0.3942
+thresh = 4 eer =	0.381536	<< best so far!
+thresh = 5 eer =	0.381536
+thresh = 6 eer =	0.368772	<< best so far!
+thresh = 7 eer =	0.36244	<< best so far!
+thresh = 8 eer =	0.353571	<< best so far!
+thresh = 9 eer =	0.348546	<< best so far!
+thresh = 10 eer =	0.346862	<< best so far!
+thresh = 11 eer =	0.345078	<< best so far!
+thresh = 12 eer =	0.346158
+thresh = 13 eer =	0.346862
+thresh = 14 eer =	0.346158
+thresh = 15 eer =	0.344048	<< best so far!
+thresh = 16 eer =	0.346385
+thresh = 17 eer =	0.345782
+thresh = 18 eer =	0.345782
+thresh = 19 eer =	0.347565
+thresh = 20 eer =	0.345455
+thresh = 21 eer =	0.342641	<< best so far!
+thresh = 22 eer =	0.343344
+thresh = 23 eer =	0.347942
+thresh = 24 eer =	0.345782
+thresh = 25 eer =	0.346385
+thresh = 26 eer =	0.346158
+thresh = 27 eer =	0.345078
+thresh = 28 eer =	0.346385
+thresh = 29 eer =	0.346712
+thresh = 30 eer =	0.344601
+thresh = 31 eer =	0.346158
+thresh = 32 eer =	0.347565
+thresh = 33 eer =	0.344374
+thresh = 34 eer =	0.345455
+thresh = 35 eer =	0.344048
+thresh = 36 eer =	0.344374
+thresh = 37 eer =	0.345455
+thresh = 38 eer =	0.347942
+thresh = 39 eer =	0.345455
+thresh = 40 eer =	0.347942
+thresh = 41 eer =	0.345455
+thresh = 42 eer =	0.347139
+thresh = 43 eer =	0.348646
+thresh = 44 eer =	0.346862
+thresh = 45 eer =	0.348269
+thresh = 46 eer =	0.346485
+thresh = 47 eer =	0.345078
+thresh = 48 eer =	0.344374
+thresh = 49 eer =	0.344751
+thresh = 50 eer =	0.347942
+thresh = 51 eer =	0.345078
+thresh = 52 eer =	0.344374
+thresh = 53 eer =	0.342967
+thresh = 54 eer =	0.347565
+thresh = 55 eer =	0.348646
+thresh = 56 eer =	0.348646
+thresh = 57 eer =	0.344374
+thresh = 58 eer =	0.344374
+thresh = 59 eer =	0.347942
+thresh = 60 eer =	0.348269
+thresh = 61 eer =	0.346862
+thresh = 62 eer =	0.347139
+thresh = 63 eer =	0.342641
+thresh = 64 eer =	0.343344
+thresh = 65 eer =	0.342967
+thresh = 66 eer =	

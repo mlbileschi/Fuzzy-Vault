@@ -1,0 +1,1 @@
+void logfile_print(char* pFormat, ...);
